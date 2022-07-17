@@ -1,23 +1,247 @@
-$color: #00cc99;
-
-.header {
-  height: 200px;
-  background-color: #00cc99;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    vertical-align: middle;
 }
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
+// css reset finish
+
+$Bold: 500;
+$Medium: 700;
+$Black: 900;
+$unit: 8px;
+
+.pt-7 {
+  padding-top: $unit*7;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.mb12 {
+  margin-bottom: 12px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb-2 {
+  margin-bottom: $unit*2;
+}
+
+.mb-4 {
+  margin-bottom: $unit*4;
+}
+
+.mb-5 {
+  margin-bottom: $unit*5;
+}
+
+.mb-6 {
+  margin-bottom: $unit*6;
+}
+
+.mb-7 {
+  margin-bottom: $unit*7;
+}
+
+.d-flex {
   display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
+}
+
+
+body {
+  // roboto bold italic
+  font-family: 'Roboto', sans-serif;
+  font-weight: $Medium;
+  // default setting
+  font-size: 24px;
+  line-height: 1.5;
+  font-style: italic;
+}
+  
+header {
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  height: 960px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #707070;
+}
+
+.brand, .contact {
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  font-weight: $Black;
+  font-size: 80px;
+  line-height: 1.325;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 1.325;// 84px
+}
+
+.topic {
+  p {
+    font-weight: $Bold;
+  }
+  
+  .prefix {
+    line-height: 1.75;
+  }
+  
+  .icons {
+    justify-content: space-around;
+
+    li {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  margin: 0 auto $unit*7;
+  
+  ul {
+    font-weight: $Bold;
+  }
+}
+
+.custom-lh {
+  line-height: 1.5;
+}
+  
+.info {
+    margin-bottom: 24px;
+    line-height: 1.75;
+}
+
+.exp {
+  width: 384px;
+  border-top: 1px solid #000;
+  margin: 0 auto;
+  padding-top: 28px;
+
+  li {
+    line-height: 1.75;
+    margin-bottom: 28px;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: #891818;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+  }
+}
+
+.brand {
+  text-align: center;
+  padding-top: $unit*7;
+  padding-bottom: $unit*20;
+  border: 1px solid #707070;
+
+  .slogan {
+    line-height: 1.75;
+  }
+
+  .intro {
+    font-size: 20px;
+    margin-bottom: $unit*8.5;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+
+.works {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: $unit*18;
+
+  p {
+    font-size: 20px;
+  }
+  
+  ul {
+    justify-content: space-between;
+
+    img {
+      margin-bottom: $unit*2;
+    }
+
+    p {
+      line-height: 2.1;
+    }
+  }
+}
+
+.contact {
+  text-align: center;
+  padding: $unit*8 0 $unit*8-$unit*2;
+  
+  ul {
+    li {
+      margin-bottom: $unit*2;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
   }
 }

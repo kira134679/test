@@ -113,8 +113,9 @@ h2 {
   line-height: 1.75; }
 
 .topic .icons {
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .topic .icons li:hover {
     opacity: 0.5; }
 
@@ -159,16 +160,22 @@ h2 {
     font-size: 20px;
     margin-bottom: 68px; }
   .brand ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto; }
+    .brand ul .mb-5-center {
+      margin: 0 auto 40px; }
 
 .works {
   width: 1200px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 144px; }
-  .works p {
+  .works h3 {
     font-size: 20px; }
   .works ul {
     -webkit-box-pack: justify;
